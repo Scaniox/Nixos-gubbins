@@ -46,10 +46,10 @@ current=$(nixos-rebuild list-generations | grep current)
 # Commit all changes witih the generation metadata
 git commit -am "$current"
 
-# Back to where you were
-popd
-
 # Notify all OK!
 notify-send -e "NixOS Rebuilt OK!, awaiting key for push" --icon=software-update-available
 
 git push
+
+# Back to where you were
+popd

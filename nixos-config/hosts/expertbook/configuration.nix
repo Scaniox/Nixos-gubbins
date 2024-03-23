@@ -142,6 +142,7 @@
     rot8
     usbutils
     opentabletdriver
+    chromium
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

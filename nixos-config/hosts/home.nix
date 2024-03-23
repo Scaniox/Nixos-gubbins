@@ -24,7 +24,7 @@
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    # pkgs.hello
+    pkgs.hello
     pkgs.vscode
     pkgs.barrier
     pkgs.obsidian

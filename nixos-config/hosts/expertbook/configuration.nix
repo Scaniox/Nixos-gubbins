@@ -139,7 +139,7 @@
     alejandra
     neofetch
     libnotify
-    # libsForQt5
+    rot8
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

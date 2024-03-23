@@ -140,6 +140,7 @@
     neofetch
     libnotify
     rot8
+    usbutils
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

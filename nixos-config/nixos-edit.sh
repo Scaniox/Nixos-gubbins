@@ -15,7 +15,8 @@
 set -e
 
 # Edit your config
-$EDITOR ~/nixos-gubbins/nixos-config/hosts/home.nix
+# $EDITOR ~/nixos-gubbins/nixos-config/hosts/home.nix
+sudo code nixos-config.code-workspace --wait --no-sandbox --user-data-dir
 
 # cd to your config dir
 pushd ~/nixos-gubbins/nixos-config

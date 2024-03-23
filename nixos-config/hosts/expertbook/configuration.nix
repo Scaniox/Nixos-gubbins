@@ -139,6 +139,7 @@
     alejandra
     neofetch
     libnotify
+    # libsForQt5
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -15,10 +15,10 @@
 set -e
 
 # Edit your config
-$EDITOR ~/nixos-config/home.nix
+$EDITOR ~/nixos-gubbins/nixos-config/hosts/home.nix
 
 # cd to your config dir
-pushd ~/nixos-config/
+pushd ~/nixos-gubbins/nixos-config
 
 # Early return if no changes were detected (thanks @singiamtel!)
 if git diff --quiet '*.nix'; then
@@ -28,7 +28,7 @@ if git diff --quiet '*.nix'; then
 fi
 
 # Autoformat your nix files
-alejandra . &>/dev/null \
+sudo alejandra . &>/dev/null \
   || ( alejandra . ; echo "formatting failed!" && exit 1)
 
 # Shows your changes
@@ -37,8 +37,7 @@ git diff -U0 '*.nix'
 echo "NixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log trackebacks
-sudo nixos-rebuild switch &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
-
+sudo nixos-rebuild switch --flake .#default &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
 # Get current generation metadata
 current=$(nixos-rebuild list-generations | grep current)

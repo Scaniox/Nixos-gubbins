@@ -1,14 +1,16 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, inputs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
@@ -29,7 +31,7 @@
   networking.hostName = "DESKTOP-L85FNNQ"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -98,7 +100,7 @@
   fileSystems."/mnt/nvme0n1p6" = {
     device = "/dev/nvme0n1p6";
     fsType = "auto";
-    options = [ "defaults" "user" "rw" "utf8" "noauto" "umask=000" ];
+    options = ["defaults" "user" "rw" "utf8" "noauto" "umask=000"];
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -108,16 +110,16 @@
   users.users.alexl = {
     isNormalUser = true;
     description = "Alex";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       firefox
       kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     users = {
       "alexl" = import ../home.nix;
     };
@@ -129,13 +131,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  wget
-  git
-  cmake
-  gnumake
-  gcc
-  alejandra
-  neofetch
+    #  wget
+    git
+    cmake
+    gnumake
+    gcc
+    alejandra
+    neofetch
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -166,5 +168,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }

@@ -28,6 +28,7 @@
     pkgs.vscode
     pkgs.barrier
     pkgs.obsidian
+    pkgs.write_stylus
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

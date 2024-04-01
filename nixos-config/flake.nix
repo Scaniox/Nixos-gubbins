@@ -19,7 +19,7 @@
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        ./hosts/expertbook/configuration.nix
+        ./hosts/legion/configuration.nix
         inputs.home-manager.nixosModules.default
         inputs.minegrub-theme.nixosModules.default
       ];

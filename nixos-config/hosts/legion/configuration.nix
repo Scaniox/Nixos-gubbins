@@ -135,10 +135,10 @@
     alejandra
     neofetch
     libnotify
-    rot8
     usbutils
     opentabletdriver
     chromium
+    lenovo-legion
   ];
 
   programs.partition-manager.enable = true;

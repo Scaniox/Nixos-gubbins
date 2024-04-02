@@ -110,6 +110,8 @@
     neofetch
     libnotify
     usbutils
+    pciutils
+    lshw
     opentabletdriver
     chromium
   ];

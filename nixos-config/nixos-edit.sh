@@ -23,11 +23,6 @@ git pull
 # $EDITOR ~/nixos-gubbins/nixos-config/hosts/home.nix
 sudo code ~/nixos-gubbins/nixos-config/nixos-config.code-workspace --wait --no-sandbox --user-data-dir
 
-if [[[[ "$@" =~ "rebuild" ]] and ! [[ "$@" =~ "rebuild" ]]]]; then
-   echo "rebuilding"
-fi
-
-
 # Early return if no changes were detected (thanks @singiamtel!)
 if [[ "$@" =~ "rebuild" ]] && git diff --quiet '*.nix'; then
     echo "No changes detected, exiting."

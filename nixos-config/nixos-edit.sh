@@ -14,12 +14,14 @@
 # A rebuild script that commits on a successful build
 set -e
 
+# cd to your config dir
+pushd ~/nixos-gubbins/nixos-config
+
+git pull
+
 # Edit your config
 # $EDITOR ~/nixos-gubbins/nixos-config/hosts/home.nix
 sudo code ~/nixos-gubbins/nixos-config/nixos-config.code-workspace --wait --no-sandbox --user-data-dir
-
-# cd to your config dir
-pushd ~/nixos-gubbins/nixos-config
 
 # Early return if no changes were detected (thanks @singiamtel!)
 if git diff --quiet '*.nix'; then

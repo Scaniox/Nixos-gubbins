@@ -16,7 +16,7 @@
     nixpkgs,
     ...
   } @ inputs: {
-    nixosConfigurations.legion = nixpkgs.lib.nixosSystem {
+    nixosConfigurations."DESKTOP-M60QOUU" = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/legion/configuration.nix
@@ -24,7 +24,7 @@
         inputs.minegrub-theme.nixosModules.default
       ];
     };
-    nixosConfigurations.expertbook = nixpkgs.lib.nixosSystem {
+    nixosConfigurations."DESKTOP-L85FNNQ" = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/expertbook/configuration.nix

@@ -24,7 +24,7 @@ git pull
 sudo code ~/nixos-gubbins/nixos-config/nixos-config.code-workspace --wait --no-sandbox --user-data-dir
 
 # Early return if no changes were detected (thanks @singiamtel!)
-if [[ "$@" =~ "rebuild" ]] && git diff --quiet '*.nix'; then
+if ! [[ "$@" =~ "rebuild" ]] && git diff --quiet '*.nix'; then
     echo "No changes detected, exiting."
     popd
     exit 0

@@ -136,7 +136,6 @@
     neofetch
     libnotify
     usbutils
-    rot8
     opentabletdriver
     chromium
   ];

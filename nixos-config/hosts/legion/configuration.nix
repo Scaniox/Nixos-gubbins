@@ -4,6 +4,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   imports = [
@@ -12,11 +13,25 @@
   ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub = {
+    enable = true;
+    device = "nodev";
+    efiSupport = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+    memtest86.enable = true;
+    default = "saved";
+    useOSProber = true;
+    minegrub-theme = {
+      enable = true;
+      splash = "100% Flakes!";
+    };
+  };
+
+  networking.hostName = "DESKTOP-M60QOUU"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -48,7 +63,7 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -61,6 +76,9 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+  # bluetooth
+  hardware.bluetooth.enable = true;
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -94,6 +112,13 @@
     ];
   };
 
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "alexl" = import ../home.nix;
+    };
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -102,7 +127,21 @@
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
+    #  wget
+    git
+    cmake
+    gnumake
+    gcc
+    alejandra
+    neofetch
+    libnotify
+    rot8
+    usbutils
+    opentabletdriver
+    chromium
   ];
+
+  programs.partition-manager.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

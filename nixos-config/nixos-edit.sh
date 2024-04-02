@@ -42,7 +42,7 @@ sudo nixos-rebuild switch --flake .# # &>nixos-switch.log || (cat nixos-switch.l
 
 # Get current generation metadata
 current=$(nixos-rebuild --flake .# list-generations | grep current)
-system=$(neofetch --disable colors | grep -o -m 1 '@.*')
+system=$(neofetch --stdout | grep -o -m 1 '@.*')
 
 # Commit all changes witih the generation metadata
 git commit -am "$system $current"

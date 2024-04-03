@@ -35,6 +35,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     openrgb-with-all-plugins
+    obs-studio
+    droidcam
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

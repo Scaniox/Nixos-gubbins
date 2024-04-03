@@ -14,8 +14,11 @@
 
   boot.initrd.availableKernelModules = ["xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-intel"];
-  boot.extraModulePackages = [];
+  boot.kernelModules = ["kvm-intel" "v4l2loopback"];
+  boot.extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
+
+  # webcam/android cam
+  programs.adb.enable = true; # enable android proper data tethering
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/171ad984-3b32-4d88-ac5a-d85a60db9a4e";

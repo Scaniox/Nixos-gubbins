@@ -116,6 +116,7 @@
     opentabletdriver
     chromium
     vlc
+    python3
   ];
 
   programs.partition-manager.enable = true;

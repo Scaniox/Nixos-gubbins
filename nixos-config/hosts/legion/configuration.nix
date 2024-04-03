@@ -51,9 +51,13 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-  services.udev.extraRules = ''
-    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="048d", ATTRS{idProduct}=="c956", TAG+="uaccess", TAG+="Lenovo_Legion_7_gen_5"
-  '';
+
+  # udev rules
+  services = {
+    udev.packages = with pkgs; [
+      openrgb-with-all-plugins
+    ];
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

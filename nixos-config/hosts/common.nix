@@ -69,12 +69,12 @@
   console.keyMap = "uk";
 
   # make conventional shebangs work
-  system.activationScripts.binbash = {
-    deps = ["binsh"];
-    text = ''
-      ln -s /bin/sh /bin/bash
-    '';
-  };
+  # system.activationScripts.binbash = {
+  #   deps = ["binsh"];
+  #   text = ''
+  #     ln -s /bin/sh /bin/bash 2>/dev/null
+  #   '';
+  # };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

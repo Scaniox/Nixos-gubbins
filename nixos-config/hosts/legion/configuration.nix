@@ -37,6 +37,7 @@
     openrgb-with-all-plugins
     obs-studio
     droidcam
+    libsForQt5.kdenlive
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

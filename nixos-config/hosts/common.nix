@@ -117,6 +117,7 @@
     chromium
     vlc
     python3
+    python311Packages.pip
   ];
 
   programs.partition-manager.enable = true;

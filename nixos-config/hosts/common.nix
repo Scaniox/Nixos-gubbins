@@ -68,6 +68,14 @@
   # Configure console keymap
   console.keyMap = "uk";
 
+  # make conventional shebangs work
+  system.activationScripts.binbash = {
+    deps = ["binsh"];
+    text = ''
+      ln -s /bin/sh /bin/bash
+    '';
+  };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

@@ -112,6 +112,7 @@
     usbutils
     pciutils
     lshw
+    tmux
     opentabletdriver
     chromium
   ];

@@ -115,6 +115,7 @@
     tmux
     opentabletdriver
     chromium
+    vlc
   ];
 
   programs.partition-manager.enable = true;

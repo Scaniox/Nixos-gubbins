@@ -3,7 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    minegrub-theme.url = "github:Lxtharia/minegrub-theme";
+    minegrub-theme = {
+      url = "github:Lxtharia/minegrub-theme";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";

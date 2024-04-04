@@ -127,6 +127,7 @@
     vlc
     python3
     python311Packages.pip
+    solaar # logitech unifying reciever
   ];
 
   programs.partition-manager.enable = true;
@@ -143,6 +144,9 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+
+  # uinfying reciever udev rules:
+  hardware.logitech.wireless.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

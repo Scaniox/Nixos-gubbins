@@ -38,6 +38,7 @@
     obs-studio
     droidcam
     libsForQt5.kdenlive
+    steam
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

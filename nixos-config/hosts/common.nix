@@ -13,6 +13,7 @@
     enable = true;
     device = "nodev";
     efiSupport = true;
+    configurationLimit = 30;
 
     memtest86.enable = true;
     default = "saved";

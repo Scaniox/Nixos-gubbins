@@ -81,6 +81,8 @@
       intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
     };
+
+    forceFullCompositionPipeline = true;
   };
 
   # List packages installed in system profile. To search, run:

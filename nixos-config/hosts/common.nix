@@ -129,6 +129,7 @@
     python3
     python311Packages.pip
     solaar # logitech unifying reciever
+    remmina # ecs.gg/gpu
   ];
 
   programs.partition-manager.enable = true;

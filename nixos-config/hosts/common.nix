@@ -131,6 +131,7 @@
     solaar # logitech unifying reciever
     remmina # ecs.gg/gpu
     iperf
+    kdePackages.plasma-firewall
   ];
 
   programs.partition-manager.enable = true;

@@ -130,6 +130,7 @@
     python311Packages.pip
     solaar # logitech unifying reciever
     remmina # ecs.gg/gpu
+    iperf2
   ];
 
   programs.partition-manager.enable = true;

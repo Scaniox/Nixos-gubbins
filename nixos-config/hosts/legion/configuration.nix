@@ -93,6 +93,7 @@
     droidcam
     libsForQt5.kdenlive
     steam
+    gdb
   ];
 
   programs.steam.enable = true;

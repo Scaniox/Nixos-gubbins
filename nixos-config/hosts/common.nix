@@ -150,6 +150,8 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
+  services.teamviewer.enable = true;
+
   # uinfying reciever udev rules:
   hardware.logitech.wireless.enable = true;
 

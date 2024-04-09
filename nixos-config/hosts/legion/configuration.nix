@@ -94,7 +94,7 @@
     libsForQt5.kdenlive
     steam
     gdb
-    jre8
+    zulu8
   ];
 
   programs.steam.enable = true;

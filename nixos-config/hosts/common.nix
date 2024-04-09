@@ -133,6 +133,7 @@
     iperf
     kdePackages.plasma-firewall
     teamviewer
+    baobab
   ];
 
   programs.partition-manager.enable = true;

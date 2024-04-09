@@ -132,6 +132,7 @@
     remmina # ecs.gg/gpu
     iperf
     kdePackages.plasma-firewall
+    teamviewer
   ];
 
   programs.partition-manager.enable = true;

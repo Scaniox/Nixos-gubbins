@@ -96,6 +96,7 @@
     gdb
     zulu8
     postgresql_jit
+    blender
   ];
 
   programs.steam.enable = true;

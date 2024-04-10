@@ -95,6 +95,7 @@
     steam
     gdb
     zulu8
+    postgresql_jit
   ];
 
   programs.steam.enable = true;

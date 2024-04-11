@@ -31,6 +31,12 @@
     fsType = "vfat";
   };
 
+  fileSystems."/mnt/windows" = {
+    device = "/dev/nvme0n1p2";
+    fsType = "auto";
+    options = ["defaults" "user" "rw" "utf8" "noauto" "umask=000"];
+  };
+
   swapDevices = [];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

@@ -93,7 +93,6 @@
     droidcam
     libsForQt5.kdenlive
     steam
-    zulu8
     postgresql_jit
     blender
   ];

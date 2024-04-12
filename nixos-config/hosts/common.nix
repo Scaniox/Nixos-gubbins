@@ -135,6 +135,7 @@
     kdePackages.plasma-firewall
     teamviewer
     baobab
+    zulu8
   ];
 
   programs.partition-manager.enable = true;

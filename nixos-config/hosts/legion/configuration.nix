@@ -95,7 +95,6 @@
     steam
     postgresql_jit
     blender
-    lenovo-legion
   ];
 
   programs.steam.enable = true;

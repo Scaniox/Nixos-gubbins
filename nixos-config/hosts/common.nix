@@ -116,6 +116,7 @@
     cmake
     gnumake
     gcc
+    gdb
     alejandra
     neofetch
     libnotify

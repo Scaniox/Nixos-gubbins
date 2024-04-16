@@ -95,6 +95,7 @@
     steam
     postgresql_jit
     blender
+    gimp
   ];
 
   programs.steam.enable = true;

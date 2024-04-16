@@ -136,6 +136,7 @@
     teamviewer
     baobab
     zulu8
+    teams-for-linux
   ];
 
   programs.partition-manager.enable = true;

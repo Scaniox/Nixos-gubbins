@@ -137,6 +137,8 @@
     baobab
     zulu8
     teams-for-linux
+    libreoffice-qt
+    hunspell
   ];
 
   programs.partition-manager.enable = true;

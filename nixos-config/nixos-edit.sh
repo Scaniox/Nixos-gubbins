@@ -42,6 +42,9 @@ echo "NixOS Rebuilding..."
 # Rebuild, output simplified errors, log trackebacks
 sudo nixos-rebuild switch --flake .# # &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
+# restart de, just in case krunner has broke
+systemctl --user restart plasma-plasmashell 
+
 # Get current generation metadata
 current=$(nixos-rebuild --flake .# list-generations | grep current)
 system=$(neofetch --stdout | grep -o -m 1 '@.*')

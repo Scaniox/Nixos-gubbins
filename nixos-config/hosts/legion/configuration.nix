@@ -93,6 +93,7 @@
     droidcam
     libsForQt5.kdenlive
     steam
+    r2modman
     postgresql_jit
     blender
     gimp

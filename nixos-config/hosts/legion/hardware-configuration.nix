@@ -16,7 +16,7 @@
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel" "v4l2loopback"];
   boot.extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
-  boot.extraModprobeConfig = ''options iwlwifi 11n_disable=1 '';
+  # boot.extraModprobeConfig = ''options iwlwifi 11n_disable=1 '';
 
   # webcam/android cam
   programs.adb.enable = true; # enable android proper data tethering

@@ -17,7 +17,9 @@ set -e
 # cd to your config dir
 pushd ~/nixos-gubbins/nixos-config
 
-git pull
+if  [[ "$@" =~ "no_pull" ]];then
+	git pull
+fi
 
 # Edit your config
 # $EDITOR ~/nixos-gubbins/nixos-config/hosts/home.nix

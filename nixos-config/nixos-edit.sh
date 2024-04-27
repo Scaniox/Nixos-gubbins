@@ -17,7 +17,7 @@ set -e
 # cd to your config dir
 pushd ~/nixos-gubbins/nixos-config
 
-if  [[ "$@" =~ "no_pull" ]];then
+if  [[ "$@" =~ "p" ]];then
 	git pull
 fi
 

@@ -136,6 +136,7 @@
     pciutils
     lshw
     tmux
+    tree
     opentabletdriver
     chromium
     vlc

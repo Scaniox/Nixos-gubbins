@@ -97,6 +97,7 @@
     postgresql_jit
     blender
     gimp
+    octaveFull
   ];
 
   programs.steam.enable = true;

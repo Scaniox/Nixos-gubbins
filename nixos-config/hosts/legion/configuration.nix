@@ -98,7 +98,8 @@
     blender
     gimp
     octaveFull
-    pkgsCross.avr.buildPackages.gcc
+    pkgsCross.avr.buildPackages.gcc # avr tools
+    avrdudess
   ];
 
   programs.steam.enable = true;

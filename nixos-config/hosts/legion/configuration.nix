@@ -98,6 +98,7 @@
     blender
     gimp
     octaveFull
+    pkgsCross.avr.buildPackages.gcc
   ];
 
   programs.steam.enable = true;

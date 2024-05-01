@@ -152,6 +152,7 @@
     teams-for-linux
     libreoffice-qt
     hunspell
+    hunspellDicts.en_GB-large
   ];
 
   programs.partition-manager.enable = true;

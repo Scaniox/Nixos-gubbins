@@ -100,6 +100,7 @@
     octaveFull
     pkgsCross.avr.buildPackages.gcc # avr tools
     avrdudess
+    platformio
   ];
 
   programs.steam.enable = true;

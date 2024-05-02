@@ -155,6 +155,10 @@
     hunspellDicts.en_GB-large
   ];
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    vscode
+  ];
   programs.partition-manager.enable = true;
   programs.kdeconnect.enable = true;
 

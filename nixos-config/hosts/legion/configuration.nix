@@ -125,7 +125,6 @@
       openrgb-with-all-plugins
       platformio-core.udev
       openocd
-      kingstvis
     ];
   };
 

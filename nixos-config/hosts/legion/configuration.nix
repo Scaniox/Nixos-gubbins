@@ -122,6 +122,8 @@
   services = {
     udev.packages = with pkgs; [
       openrgb-with-all-plugins
+      platformio-core
+      openocd
     ];
   };
 

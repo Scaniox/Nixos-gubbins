@@ -26,7 +26,7 @@
     # # "Hello, world!" when run.
     pkgs.hello
     pkgs.discord
-    # pkgs.vscode
+    pkgs.vscode
     pkgs.barrier
     pkgs.obsidian
     pkgs.write_stylus

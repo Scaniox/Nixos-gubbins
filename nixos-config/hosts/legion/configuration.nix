@@ -102,6 +102,7 @@
     avrdudess
     platformio
     putty
+    kingstvis
   ];
 
   programs.steam.enable = true;

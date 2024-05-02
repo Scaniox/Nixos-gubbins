@@ -101,6 +101,7 @@
     pkgsCross.avr.buildPackages.gcc # avr tools
     avrdudess
     platformio
+    putty
   ];
 
   programs.steam.enable = true;

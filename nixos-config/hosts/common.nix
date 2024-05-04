@@ -153,6 +153,7 @@
     libreoffice-qt
     hunspell
     hunspellDicts.en_GB-large
+    unrar
   ];
 
   programs.nix-ld.enable = true;

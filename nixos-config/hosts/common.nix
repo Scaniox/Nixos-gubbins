@@ -154,6 +154,7 @@
     hunspell
     hunspellDicts.en_GB-large
     unrar
+    kicad
   ];
 
   programs.nix-ld.enable = true;

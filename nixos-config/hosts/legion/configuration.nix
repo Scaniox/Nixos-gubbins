@@ -103,6 +103,7 @@
     platformio
     putty
     kingstvis
+    wireshark
   ];
   programs.steam.enable = true;
   programs.wireshark.enable = true;

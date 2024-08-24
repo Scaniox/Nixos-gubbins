@@ -85,6 +85,9 @@
     forceFullCompositionPipeline = true;
   };
 
+  nixpkgs.config.permittedInsecurePackages = ["segger-jlink-qt4-794l"];
+  nixpkgs.config.segger-jlink.acceptLicense = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -104,6 +107,7 @@
     putty
     kingstvis
     wireshark
+    # nrfconnect
   ];
   programs.steam.enable = true;
   programs.wireshark.enable = true;

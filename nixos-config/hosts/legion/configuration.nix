@@ -105,7 +105,7 @@
     avrdudess
     platformio
     putty
-    # kingstvis
+    kingstvis
     wireshark
     # nrfconnect
   ];

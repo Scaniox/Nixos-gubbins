@@ -108,6 +108,7 @@
     kingstvis
     wireshark
     # nrfconnect
+    wine
     wineWowPackages.stable
   ];
   programs.steam.enable = true;

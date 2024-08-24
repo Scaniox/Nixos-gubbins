@@ -88,6 +88,9 @@
   nixpkgs.config.permittedInsecurePackages = ["segger-jlink-qt4-794l"];
   nixpkgs.config.segger-jlink.acceptLicense = true;
 
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = ["user-with-access-to-virtualbox"];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [

@@ -113,7 +113,6 @@
     # nrfconnect
     wine
     wineWowPackages.stable
-    virtualbox
   ];
   programs.steam.enable = true;
   programs.wireshark.enable = true;

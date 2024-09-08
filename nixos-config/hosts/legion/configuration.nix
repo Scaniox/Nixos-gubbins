@@ -114,6 +114,7 @@
     wine
     wineWowPackages.stable
     rdesktop
+    freerdp3
   ];
   programs.steam.enable = true;
   programs.wireshark.enable = true;

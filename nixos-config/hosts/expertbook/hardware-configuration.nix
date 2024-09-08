@@ -17,6 +17,8 @@
   boot.kernelModules = [];
   boot.extraModulePackages = [];
 
+  boot.supportedFilesystems = ["ntfs"];
+
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/a3929381-5334-49ee-a22c-2caeeeb84408";
     fsType = "ext4";

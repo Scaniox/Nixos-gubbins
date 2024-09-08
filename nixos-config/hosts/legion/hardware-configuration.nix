@@ -18,6 +18,8 @@
   boot.extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
   boot.extraModprobeConfig = ''options iwlwifi 11n_disable=1 '';
 
+  boot.supportedFilesystems = ["ntfs"];
+
   # webcam/android cam
   programs.adb.enable = true; # enable android proper data tethering
 
@@ -33,7 +35,7 @@
 
   fileSystems."/mnt/windows" = {
     device = "/dev/nvme0n1p2";
-    fsType = "auto";
+    fsType = "ntfs";
     options = ["defaults" "user" "rw" "utf8" "noauto" "umask=000"];
   };
 

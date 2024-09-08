@@ -113,6 +113,7 @@
     # nrfconnect
     wine
     wineWowPackages.stable
+    rdesktop
   ];
   programs.steam.enable = true;
   programs.wireshark.enable = true;
